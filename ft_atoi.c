@@ -6,7 +6,7 @@
 /*   By: mkiram <mkiram@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 08:37:28 by mkiram            #+#    #+#             */
-/*   Updated: 2025/10/16 13:10:50 by mkiram           ###   ########.fr       */
+/*   Updated: 2025/10/16 13:23:39 by mkiram           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int atoi(const char *str)
     int i;
     
     sign = 1;
-    while (str[i] >=  )
+    while (str[i] >= )
 }
