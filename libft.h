@@ -6,7 +6,7 @@
 /*   By: mkiram <mkiram@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:30 by mkiram            #+#    #+#             */
-/*   Updated: 2025/10/16 16:47:07 by mkiram           ###   ########.fr       */
+/*   Updated: 2025/10/16 17:52:06 by mkiram           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stddef.h>
-
 
 typedef struct s_list
 {
@@ -36,6 +35,7 @@ void *ft_memmove(void *dest, const void *src, size_t n);
 size_t ft_strlcpy(char *dst, const char *src, size_t size);
 size_t ft_strlcat(char *dst, const char *src, size_t size);
 int ft_toupper(int c);
+void ft_bzero(void *s, size_t n);
 int ft_tolower(char c);
 char *ft_strchr(const char *str, int c);
 char *ft_strrchr(const char *s, int c);
