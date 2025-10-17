@@ -6,7 +6,7 @@
 /*   By: mkiram <mkiram@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:30 by mkiram            #+#    #+#             */
-/*   Updated: 2025/10/16 17:52:06 by mkiram           ###   ########.fr       */
+/*   Updated: 2025/10/17 19:47:29 by mkiram           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,10 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int ft_atoi(const char *str);
 char *ft_strdup(const char *s);
 void *ft_calloc(size_t nmemb, size_t size);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char **ft_split(char const *s, char c);
+char *ft_strtrim(char const *s1, char const *set);
+char *ft_itoa(int n);
 
 #endif
