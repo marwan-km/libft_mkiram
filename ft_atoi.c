@@ -6,11 +6,12 @@
 /*   By: mkiram <mkiram@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 08:37:28 by mkiram            #+#    #+#             */
-/*   Updated: 2025/10/16 16:05:08 by mkiram           ###   ########.fr       */
+/*   Updated: 2025/10/18 16:36:03 by mkiram           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int ft_skip_spaces(const char *str, int i)
 {
@@ -34,7 +35,7 @@ static int ft_get_sign(const char *str, int *i)
 static long ft_add_digit(long result, int digit, int sign)
 {
     if (sign == 1 && result > (2147483647 - digit) / 10)
-        return 2147483647;
+        return -1;
     if (sign == -1 && result > (2147483648L - digit) / 10)
         return -2147483648;
     return result * 10 + digit;
@@ -64,35 +65,35 @@ int ft_atoi(const char *str)
     return (int)(result * sign);
 }
 
-// int main(void)
-// {
-//     char *tests[] = {
-//         "42",
-//         "   42",
-//         "-42",
-//         "+42",
-//         "--42",
-//         "++42",
-//         "0042",
-//         "   -0042",
-//         "2147483647",
-//         "2147483648",
-//         "-2147483648",
-//         "-2147483649",
-//         "42abc",
-//         "abc42",
-//         "----545mmk3",
-//         "",
-//         NULL};
+int main(void)
+{
+    char *tests[] = {
+        "42",
+        "   42",
+        "-42",
+        "+42",
+        "--42",
+        "++42",
+        "0042",
+        "   -0042",
+        "2147483647",
+        "214748364888888888888888888888888888888888888888888888888888888888888888888888888888",
+        "-2147483648888888888888888888888888888888888888888888888888888888888888",
+        "-2147483649",
+        "42abc",
+        "abc42",
+        "----545mmk3",
+        "",
+        NULL};
 
-//     int i = 0;
-//     while (tests[i])
-//     {
-//         printf("Test %d: \"%s\"\n", i + 1, tests[i]);
-//         printf("atoi:    %d\n", atoi(tests[i]));
-//         printf("ft_atoi: %d\n", ft_atoi(tests[i]));
-//         printf("----------------------------\n");
-//         i++;
-//     }
-//     return 0;
-// }
+    int i = 0;
+    while (tests[i])
+    {
+        printf("Test %d: \"%s\"\n", i + 1, tests[i]);
+        printf("atoi:    %d\n", atoi(tests[i]));
+        printf("ft_atoi: %d\n", ft_atoi(tests[i]));
+        printf("----------------------------\n");
+        i++;
+    }
+    return 0;
+}

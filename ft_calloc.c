@@ -6,7 +6,7 @@
 /*   By: mkiram <mkiram@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:47:21 by mkiram            #+#    #+#             */
-/*   Updated: 2025/10/17 12:30:03 by mkiram           ###   ########.fr       */
+/*   Updated: 2025/10/18 16:37:36 by mkiram           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void *ft_calloc(size_t nmemb, size_t size)
         return (ptr);
     }
 
-    ptr = (void *)malloc(nmemb * size);
+    ptr = malloc(nmemb * size);
     if (!ptr)
         return (NULL);
     ft_bzero(ptr, (size * nmemb));
